@@ -36,14 +36,7 @@ let userDestination = dayTripArray[0];
 let userRestaurant = dayTripArray[1];
 let userTransporation = dayTripArray[2];
 let userEntertainment = dayTripArray[3];
-// need a reroll funciton
-function reroll() { // i dont think this is working... need to debugg a see whats happening
-    tripDestination = pickRandomDestination();
-    tripRestaurant = pickRandomRestaurant();
-    tripTransporation = pickRandomTransportation();
-    tripEntertainment = pickRandomEntertainment();
-    return tripDestination, tripRestaurant, tripTransporation, tripEntertainment;
-}
+
 
 function userTrip(){
     alert("Your randomly generated day trip will be in " + userDestination + ", you'll eat at " + userRestaurant + ", you'll arrive by " + userTransporation + ", and you will go to a " + userEntertainment + ".");
@@ -57,14 +50,13 @@ function userValue() {
  }
  //userValue()
 
- //need a while statement to allow the entered prompt to pick a new random value from array, if user enters a corrisponding nubmer it should reroll the random value.
- let userChoice = true   // spent 20 min debugging and then remembered that this was needed to function properly 
-
+ 
+ let userChoice = true   
 while (userChoice) {
     let userInput = userValue();
 
     if(userInput === 1) {
-        userDestination = destinations[Math.floor(Math.random()*destinations.length)];   // I thought pickRandom function would work but it pulled the same value from the array, i believe it wassnt doing the matha again so putting code here seems to have fixed the issue.
+        userDestination = destinations[Math.floor(Math.random()*destinations.length)];  
         userTrip();
     }
     else if(userInput === 2) {
