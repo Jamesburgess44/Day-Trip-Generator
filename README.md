@@ -1,2 +1,2 @@
 # Day-Trip-Generator
-will generate a day drip
+will generate a day trip
